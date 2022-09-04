@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/aui.css" rel="stylesheet">
+    <link rel="icon" href="image/puzai.ico" />
+    <title>噗崽很饿的歌单</title>
+</head>
+
+<body style="background-color: rgb(233,233,233);" class="antialiased">
+    <div class="wrapper">
+        <div class="page-wrapper">
+            <div class="page-body">
+                <div class="container-xl">
+                    <div class="row row-cards row-deck">
+                        <div class="col-lg-12">
+                            <div class="card mt-3"
+                                style="background-color: rgb(255,255,255); border-radius: 16px; color: rgb(188,188,188);">
+                                <div class="d-md-flex">
+                                    <div class="text-center avatar p-2">
+                                        <img class=" mt-5 w-75" onclick="openTV()" src="image/puzai.webp">
+                                    </div>
+                                    <div class=" mt-5 text-center">
+                                        <h2><span style="color:rgb(144,155,196); text-decoration:underline;"
+                                                onclick="openTV()">噗崽很饿</span>
+                                        </h2>
+                                        <p class="mx-2 my-2">
+                                            这里是噗崽，是拥有一只魔法猫咪，早睡早起体弱多病的普通小孩，在人间为了保持开心和猫咪合体变身成为了一名猫娘歌姬来到大家身边寻找快乐魔法！！！</p>
+                                        <p class="mx-2 my-2">抒情歌，老歌，甜歌，周杰伦！and一些些民谣和摇滚。不太会戏腔，粤语很塑料，日语是挺标准的罗马音战士。</p>
+                                        <p class="mx-2 my-2">在下方搜索歌手或歌名，点击结果即可复制点歌弹幕</p>
+                                        </br>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12">
+                            <div class="card mt-3"
+                                style="background-color: rgb(255,255,255); border-radius: 16px; color: rgb(188,188,188);">
+                                <div class="search p-2 card-header" onkeyup="searchByName()">
+                                    <input id="songName" type="text" class="form-control" placeholder="搜索歌名/歌手">
+                                </div>
+
+                                <div class="card-body">
+                                    <ul id="songList" class="list-group list-group-flush">
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.11/clipboard.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.0/js/bootstrap.min.js"></script>
+    <script src="js/songs.js"></script>
+    <script src="js/func.js"></script>
+    <script src="js/aui-toast.js"></script>
+</body>
+
+</html>
