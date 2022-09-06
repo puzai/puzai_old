@@ -43,8 +43,12 @@ function searchByName() {
 
 var songCnt = 1;
 function randomSong() {
+	if (songCnt == 1)
+		return;
+	
     setTimeout(() => {
     }, 0);
+
     let index = Math.floor((Math.random() * songCnt)) + 1;
     copySong(document.getElementById('song' + index));
 }
