@@ -47,7 +47,11 @@
                             <div class="card mt-3"
                                 style="background-color: rgb(255,255,255); border-radius: 16px; color: rgb(128,128,128); box-shadow: 1px 1px 2px #666;">
                                 <div class="search p-2 card-header" onkeyup="searchByName()">
-                                    <input id="songName" type="text" class="form-control" placeholder="搜索歌名/歌手">
+                                    <div class="d-md-flex">
+                                        <input id="songName" type="text" class="form-control" placeholder="搜索歌名/歌手" />
+                                        <button class="btn btn-default text-nowrap" onclick="randomSong()"
+                                            title="随机复制下方歌单中歌曲点歌弹幕（搜索时仅限搜索结果）">随机点歌</button>
+                                    </div>
                                 </div>
 
                                 <div class="card-body">
