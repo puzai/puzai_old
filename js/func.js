@@ -11,29 +11,42 @@ function searchByName() {
 
     input = document.getElementById("songName").value.toUpperCase();
 
+    songCnt = 1;
+
     for (var key in songs) {
         if (key.toUpperCase().indexOf(input) > -1) {
             for (var datas in songs[key]) {
                 let lis = document.createElement('li')
+                lis.setAttribute('id', 'song' + songCnt);
                 lis.setAttribute('class', 'list-group-item list-group-item-light');
                 lis.setAttribute('onclick', 'copySong(this)');
                 lis.innerHTML = songs[key][datas] + "——" + key;
                 table.appendChild(lis);
+                songCnt++;
             }
         }
         else {
             for (var datas in songs[key]) {
                 if (songs[key][datas].toUpperCase().indexOf(input) > -1) {
                     let lis = document.createElement('li')
+                    lis.setAttribute('id', 'song' + songCnt);
                     lis.setAttribute('class', 'list-group-item list-group-item-light');
                     lis.setAttribute('onclick', 'copySong(this)');
                     lis.innerHTML = songs[key][datas] + "——" + key;
                     table.appendChild(lis);
-
+                    songCnt++;
                 }
             }
         }
     }
+}
+
+var songCnt = 1;
+function randomSong() {
+    setTimeout(() => {
+    }, 0);
+    let index = Math.floor((Math.random() * songCnt)) + 1;
+    copySong(document.getElementById('song' + index));
 }
 
 function getSongs() {
@@ -43,14 +56,18 @@ function getSongs() {
         ele.remove();
     }
 
+    songCnt = 1;
+
     for (var key in songs) {
         console.log(key);
         for (var datas in songs[key]) {
-            let lis = document.createElement('li')
+            let lis = document.createElement('li');
+            lis.setAttribute('id', 'song' + songCnt);
             lis.setAttribute('class', 'list-group-item list-group-item-light');
             lis.setAttribute('onclick', 'copySong(this)');
             lis.innerHTML = songs[key][datas] + "——" + key;
             table.appendChild(lis);
+            songCnt++;
         }
     }
 }
